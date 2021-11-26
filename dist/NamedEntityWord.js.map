@@ -1,0 +1,1 @@
+{"version":3,"file":"NamedEntityWord.js","sourceRoot":"","sources":["../source/NamedEntityWord.ts"],"names":[],"mappings":";;;;;;;;;;;;IAAA,qEAAgE;IAGhE,MAAa,eAAgB,SAAQ,WAAI;QAIrC;;;;WAIG;QACH,YAAY,IAAY,EAAE,eAAgC;YACtD,KAAK,CAAC,IAAI,CAAC,CAAC;YACZ,IAAI,CAAC,eAAe,GAAG,eAAe,CAAA;QAC1C,CAAC;QAED;;;;WAIG;QACH,kBAAkB;YACd,OAAO,IAAI,CAAC,eAAe,CAAA;QAC/B,CAAC;KACJ;IAtBD,0CAsBC"}
