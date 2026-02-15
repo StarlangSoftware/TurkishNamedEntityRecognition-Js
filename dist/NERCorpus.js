@@ -1,43 +1,66 @@
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "nlptoolkit-corpus/dist/Corpus", "fs", "./NamedEntitySentence"], factory);
-    }
-})(function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    exports.NERCorpus = void 0;
-    const Corpus_1 = require("nlptoolkit-corpus/dist/Corpus");
-    const fs = require("fs");
-    const NamedEntitySentence_1 = require("./NamedEntitySentence");
-    class NERCorpus extends Corpus_1.Corpus {
-        /**
-         * Another constructor of {@link NERCorpus} which takes a fileName of the corpus as an input, reads the
-         * corpus from that file.
-         *
-         * @param fileName Name of the corpus file.
-         */
-        constructor(fileName) {
-            super();
-            if (fileName != undefined) {
-                let data = fs.readFileSync(fileName, 'utf8');
-                let lines = data.split("\n");
-                for (let line of lines) {
-                    this.addSentence(new NamedEntitySentence_1.NamedEntitySentence(line));
-                }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || (function () {
+    var ownKeys = function(o) {
+        ownKeys = Object.getOwnPropertyNames || function (o) {
+            var ar = [];
+            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
+            return ar;
+        };
+        return ownKeys(o);
+    };
+    return function (mod) {
+        if (mod && mod.__esModule) return mod;
+        var result = {};
+        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
+        __setModuleDefault(result, mod);
+        return result;
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NERCorpus = void 0;
+const Corpus_1 = require("nlptoolkit-corpus/dist/Corpus");
+const fs = __importStar(require("fs"));
+const NamedEntitySentence_1 = require("./NamedEntitySentence");
+class NERCorpus extends Corpus_1.Corpus {
+    /**
+     * Another constructor of {@link NERCorpus} which takes a fileName of the corpus as an input, reads the
+     * corpus from that file.
+     *
+     * @param fileName Name of the corpus file.
+     */
+    constructor(fileName) {
+        super();
+        if (fileName != undefined) {
+            let data = fs.readFileSync(fileName, 'utf8');
+            let lines = data.split("\n");
+            for (let line of lines) {
+                this.addSentence(new NamedEntitySentence_1.NamedEntitySentence(line));
             }
         }
-        /**
-         * addSentence adds a new sentence to the sentences {@link Array}
-         * @param s Sentence to be added.
-         */
-        addSentence(s) {
-            this.sentences.push(s);
-        }
     }
-    exports.NERCorpus = NERCorpus;
-});
+    /**
+     * addSentence adds a new sentence to the sentences {@link Array}
+     * @param s Sentence to be added.
+     */
+    addSentence(s) {
+        this.sentences.push(s);
+    }
+}
+exports.NERCorpus = NERCorpus;
 //# sourceMappingURL=NERCorpus.js.map

@@ -1,1 +1,1 @@
-{"version":3,"file":"SlotType.js","sourceRoot":"","sources":["../source/SlotType.ts"],"names":[],"mappings":";;;;;;;;;;;;IAAA,IAAY,QAEX;IAFD,WAAY,QAAQ;QAChB,iCAAC,CAAA;QAAE,iCAAC,CAAA;QAAE,iCAAC,CAAA;IACX,CAAC,EAFW,QAAQ,GAAR,gBAAQ,KAAR,gBAAQ,QAEnB"}
+{"version":3,"file":"SlotType.js","sourceRoot":"","sources":["../source/SlotType.ts"],"names":[],"mappings":";;;AAAA,IAAY,QAEX;AAFD,WAAY,QAAQ;IAChB,iCAAC,CAAA;IAAE,iCAAC,CAAA;IAAE,iCAAC,CAAA;AACX,CAAC,EAFW,QAAQ,wBAAR,QAAQ,QAEnB"}
